@@ -7,12 +7,17 @@ export const ThemeToggle = () => {
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
+
+    if (storedTheme === "light") {
+      setIsDarkMode(false);
+      document.documentElement.classList.remove("dark");
+    } else {
+      // If dark or no theme is stored, default to dark
       setIsDarkMode(true);
       document.documentElement.classList.add("dark");
-    } else {
-      localStorage.setItem("theme", "light");
-      setIsDarkMode(false);
+      if (!storedTheme) {
+        localStorage.setItem("theme", "dark");
+      }
     }
   }, []);
 
@@ -35,8 +40,8 @@ export const ThemeToggle = () => {
         "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
         "focus:outline-hidden"
       )}
+      aria-label="Toggle theme"
     >
-      {/* we are using cn via importing it from lib/utils.js to give multiple classnames at once */}{" "}
       {isDarkMode ? (
         <Sun className="h-6 w-6 text-yellow-300" />
       ) : (
