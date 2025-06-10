@@ -15,22 +15,30 @@ export const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const res = await fetch("http://localhost:5000/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: e.target.name.value,
-        email: e.target.email.value,
-        message: e.target.message.value,
-      }),
-    });
+    try {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/send`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: e.target.name.value,
+          email: e.target.email.value,
+          message: e.target.message.value,
+        }),
+      });
 
-    const result = await res.json();
+      const result = await res.json();
 
-    if (res.ok) {
-      toast({ title: "Message Sent!", description: result.message });
-    } else {
-      toast({ title: "Failed to send", description: result.message });
+      if (res.ok) {
+        toast({ title: "Message Sent!", description: result.message });
+        e.target.reset(); // Optional: Reset form fields
+      } else {
+        toast({ title: "Failed to Send", description: result.message });
+      }
+    } catch (err) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+      });
     }
 
     setIsSubmitting(false);
