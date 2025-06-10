@@ -6,7 +6,7 @@ const projects = [
     title: "myCryptoTracker",
     description:
       "A Cryptocurrency Tracking App include Top 10 cryptocurrencies, Trending coins, and a customizable Watchlist.",
-    image: "public/projects/project1.png",
+    image: "/projects/project1.PNG",
     tags: ["React", "TailwindCSS", "Redux Toolkit"],
     demoUrl: "https://mycryptotrackerr.netlify.app/",
     githubUrl: "https://github.com/AkshatSrivastava08/myCryptoTracker",
@@ -16,7 +16,7 @@ const projects = [
     title: "HomeScout",
     description:
       "A real estate web app for discovering and listing properties with map integration and real-time chat system.",
-    image: "public/projects/project2.png",
+    image: "/projects/project2.PNG",
     tags: ["React", "Leaflet.js", "socket.io", "SCSS"],
     demoUrl: "https://github.com/AkshatSrivastava08/Real_estate_webapp",
     githubUrl: "https://github.com/AkshatSrivastava08/Real_estate_webapp",
@@ -26,7 +26,7 @@ const projects = [
     title: "DevCraftr",
     description:
       "Code Editor for HTML, CSS, and JavaScript with live preview functionality for real-time editing and rendering.",
-    image: "public/projects/project3.png",
+    image: "/projects/project3.PNG",
     tags: ["React", "CSS", "codemirror library"],
     demoUrl: "https://devcraftr.netlify.app/",
     githubUrl: "https://github.com/AkshatSrivastava08/DevCraftr",
@@ -36,7 +36,7 @@ const projects = [
     title: "The Book Burrow",
     description:
       "A Web platform to search for various books using google books api.",
-    image: "public/projects/project4.png",
+    image: "/projects/project4.PNG",
     tags: ["React", "CSS", "google books api"],
     demoUrl: "https://thebookburrow.netlify.app/",
     githubUrl: "https://github.com/AkshatSrivastava08/Book_Library_app",
@@ -46,7 +46,7 @@ const projects = [
     title: "Gourmet Gems",
     description:
       "A Web Application to search for various Food Recipes using TheMealDB api.",
-    image: "public/projects/project5.png",
+    image: "/projects/project5.PNG",
     tags: ["React", "Node.js", "TheMealDB api"],
     demoUrl: "https://gourmetgems.netlify.app/",
     githubUrl: "https://github.com/AkshatSrivastava08/Recipe_app",
@@ -56,7 +56,7 @@ const projects = [
     title: "Pomodor app",
     description:
       "A pomodoro web app with 25 mins work timer and 5 mins break timer to increase focus.",
-    image: "public/projects/project6.png",
+    image: "/projects/project6.PNG",
     tags: ["React", "Node.js"],
     demoUrl: "https://pomodorotimerwebapp.netlify.app/",
     githubUrl: "https://github.com/AkshatSrivastava08/POMODORO_app",
