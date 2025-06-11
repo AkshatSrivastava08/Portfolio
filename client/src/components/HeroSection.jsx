@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import Tilt from "react-parallax-tilt";
 
 export const HeroSection = () => {
   return (
@@ -7,18 +8,19 @@ export const HeroSection = () => {
       className="relative min-h-screen flex flex-col items-center justify-center px-4"
     >
       {/* Avatar Image Section */}
-      <div className="mb-6 relative z-10">
-        <div className="w-45 h-45 rounded-full bg-gray-800 overflow-hidden border-4 border-primary shadow-lg mx-auto animate-fade-in">
-          <img
-            src="/avatar.png"
-            alt="Akshat Avatar"
-            className="object-cover w-full h-fit"
-          />
+      <Tilt>
+        <div className="mb-6 relative z-10">
+          <div className="w-45 h-45 rounded-full bg-gray-800 overflow-hidden border-4 border-primary shadow-lg mx-auto animate-fade-in">
+            <img
+              src="/avatar.png"
+              alt="Akshat Avatar"
+              className="object-cover w-full h-fit"
+            />
+          </div>
+          {/* Optional Glow/Graphic Effect */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-primary/20 blur-3xl z-[-1]"></div>
         </div>
-        {/* Optional Glow/Graphic Effect */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-primary/20 blur-3xl z-[-1]"></div>
-      </div>
-
+      </Tilt>
       {/* Text Section */}
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
